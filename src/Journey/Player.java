@@ -22,7 +22,7 @@ public class Player {
         return watch;
     }
 
-    public void setWatch(int value){
+    public void setWatch(int value) {
         watch -= value;
     }
 
@@ -30,9 +30,9 @@ public class Player {
         points += value;
     }
 
-    public void printEachLevel(){
-        System.out.println("++ Points: "+ getPoints());
-        System.out.println("++ Watch: "+ getWatch() + "m");
+    public void printEachLevel() {
+        System.out.println("++ Points: " + getPoints());
+        System.out.println("++ Watch: " + getWatch() + "m");
         System.out.println("Type in \"north\", \"east\", \"west\" or \"south\" to move in that direction");
     }
 }

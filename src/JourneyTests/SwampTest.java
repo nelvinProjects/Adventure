@@ -36,7 +36,7 @@ class SwampTest {
     @Test
     void levelAction() {
         Swamp swamp = new Swamp();
-        Assert.assertEquals("Output doesn't match", "You can see a faint image of a tree in front of you that's moving towards you, do you" +
+        Assert.assertEquals("Output doesn't match", "You can see a faint image of a tree in front of you that's moving towards you, do you " +
                 "face it or run?", swamp.levelAction('n', swamp.getLevel()));
         swamp.setLevel();
         Assert.assertEquals("Output doesn't match", "In front of you is a skeleton wolf, do you wish to fight or run?"

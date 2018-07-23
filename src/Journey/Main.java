@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        boolean fight;
         boolean game = true;
         try {
             Scanner scanner = new Scanner(System.in);
@@ -37,20 +36,19 @@ public class Main {
                     if (value == 'r') {
                         player.setPoints(-3);
                     } else {
-                        if (swamp.getLevel() == 3){
+                        if (swamp.getLevel() == 3) {
                             System.out.println(swamp.levelAction('s', swamp.getLevel()));
-                            if (player.getPoints() > 12){
+                            if (player.getPoints() > 12) {
                                 System.out.println(player.getName() + ", you have completed the challenage," +
                                         " you may wish for anything and it will be granted. You will also get a " +
                                         "treasure box with many jewels");
                                 String input = scanner.nextLine();
-                                System.out.println("Your wish \""+ input + "\" is granted, and you are back in your room." +
+                                System.out.println("Your wish \"" + input + "\" is granted, and you are back in your room." +
                                         " \nBye forever :)");
                                 break;
-                            }
-                            else {
+                            } else {
                                 System.out.println("You found a treasure box with few gold and diamonds");
-                                System.out.println(player.getName()+ ", you have completed the game, and are " +
+                                System.out.println(player.getName() + ", you have completed the game, and are " +
                                         "taken back to your room. \n Bye forever -_-");
                                 break;
                             }
@@ -68,7 +66,7 @@ public class Main {
                             player.setWatch(10);
                         }
                     }
-                    System.out.println("FOR TEST PURPOSE:::: Level "+ swamp.getLevel());
+                    System.out.println("FOR TEST PURPOSE:::: Level " + swamp.getLevel());
                 } else {
                     while (!swamp.getForward()) {
                         if (countWrongChoice > 2) {
@@ -92,6 +90,5 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

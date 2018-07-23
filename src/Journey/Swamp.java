@@ -31,11 +31,11 @@ public class Swamp {
         forward = value;
     }
 
-    public int getLevel(){
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(){
+    public void setLevel() {
         level += 1;
     }
 
@@ -61,8 +61,8 @@ public class Swamp {
         }
     }
 
-    public String wrongChoice(char decision){
-        if (decision == 'b'){
+    public String wrongChoice(char decision) {
+        if (decision == 'b') {
             forward = true;
             return "You are back to where you were before";
         } else {
