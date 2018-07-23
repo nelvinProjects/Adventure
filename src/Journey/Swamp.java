@@ -15,7 +15,7 @@ public class Swamp {
     private void setLevels() {
         levels.add("You are surrounded by thick fog...Where to now?");
         levels.add("You can see a faint image of a tree in front of you that's moving towards you, do you" +
-                "face it or run?");
+                " face it or run?");
         levels.add("In front of you is a skeleton wolf, do you wish to fight or run?");
         levels.add("There is a huge hole in front of you, do you wish to jump or run?");
         levels.add("You step into land covered in blood and you hear a scream for help" +
@@ -54,10 +54,20 @@ public class Swamp {
             return levels.get(4);
         } else if (level == 4 && direction == 's') {
             setForward(true);
-            return levels.get(0);
+            return levels.get(5);
         } else {
             setForward(false);
             return levels.get(0);
+        }
+    }
+
+    public String wrongChoice(char decision){
+        System.out.println("If you wish to go back, type back or type forward, for forward");
+        if (decision == 'b'){
+            forward = true;
+            return "You are back to where you were before";
+        } else {
+            return "Hahahahahaha!!!!";
         }
     }
 

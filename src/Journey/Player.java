@@ -29,4 +29,10 @@ public class Player {
     public void setPoints(int value) {
         points += value;
     }
+
+    public void printEachLevel(){
+        System.out.println("++ Points: "+ getPoints());
+        System.out.println("++ Watch: "+ getWatch() + "m");
+        System.out.println("Type in \"north\", \"east\", \"west\" or \"south\" to move in that direction");
+    }
 }

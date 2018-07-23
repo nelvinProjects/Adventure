@@ -8,6 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SwampTest {
     @Test
+    void wrongChoice() {
+        Swamp swamp = new Swamp();
+        swamp.wrongChoice('b');
+        Assert.assertEquals("Wrong result", true, swamp.getForward());
+        Assert.assertEquals("Wrong result", "Hahahahahaha!!!!", swamp.wrongChoice('m'));
+    }
+
+    @Test
     void getSetLevel() {
         Swamp swamp = new Swamp();
         swamp.setLevel();
