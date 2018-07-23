@@ -20,7 +20,7 @@ public class Swamp {
         levels.add("There is a huge hole in front of you, do you wish to jump or run?");
         levels.add("You step into land covered in blood and you hear a scream for help" +
                 ", do you wish to follow it or run?");
-        levels.add("You did it ");
+        levels.add("You did it!!!");
     }
 
     public boolean getForward() {
@@ -62,7 +62,6 @@ public class Swamp {
     }
 
     public String wrongChoice(char decision){
-        System.out.println("If you wish to go back, type back or type forward, for forward");
         if (decision == 'b'){
             forward = true;
             return "You are back to where you were before";
