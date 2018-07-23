@@ -6,6 +6,7 @@ import java.util.List;
 public class Swamp {
     private List<String> levels = new ArrayList<>();
     private boolean forward;
+    private int level;
 
     public Swamp() {
         setLevels();
@@ -28,6 +29,14 @@ public class Swamp {
 
     public void setForward(boolean value) {
         forward = value;
+    }
+
+    public int getLevel(){
+        return level;
+    }
+
+    public void setLevel(){
+        level += 1;
     }
 
     public String levelAction(char direction, int level) {
